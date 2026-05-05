@@ -392,17 +392,17 @@ const alternatesData = [
 ];
 
 const dayConfig = {
-  thu: { number: '00', title: 'Prelude', label: 'Thu · 14 May', accent: '#E85478' },
-  fri: { number: '01', title: 'Opening', label: 'Fri · 15 May', accent: '#E85478' },
-  sat: { number: '02', title: 'Marathon', label: 'Sat · 16 May', accent: '#E85478' },
-  sun: { number: '03', title: 'Catharsis', label: 'Sun · 17 May', accent: '#E85478' },
+  thu: { number: '00', title: 'Prelude', label: 'Thu · 14 May', accent: '#72BFD9' },
+  fri: { number: '01', title: 'Opening', label: 'Fri · 15 May', accent: '#72BFD9' },
+  sat: { number: '02', title: 'Marathon', label: 'Sat · 16 May', accent: '#72BFD9' },
+  sun: { number: '03', title: 'Catharsis', label: 'Sun · 17 May', accent: '#72BFD9' },
 };
 
 const badgeConfig = {
-  priority: { label: '★ Priority', bg: '#E85478', color: '#fff' },
+  priority: { label: '★ Priority', bg: '#72BFD9', color: '#fff' },
   walkin: { label: 'Free, walk-in', bg: 'transparent', color: '#C96830', border: '#C96830' },
   free: { label: 'Free', bg: 'transparent', color: '#C96830', border: '#C96830' },
-  booking: { label: 'Booking required', bg: '#E85478', color: '#fff' },
+  booking: { label: 'Booking required', bg: '#72BFD9', color: '#fff' },
   nolate: { label: 'No late entry', bg: '#F4F2CE', color: '#252518' },
   booked: { label: '✓ Already booked', bg: '#7A3018', color: '#fff' },
 };
@@ -459,7 +459,7 @@ export default function PianoCityProgram() {
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
         .concert-card { animation: fadeUp 0.4s ease-out backwards; }
         .heart-pulse { animation: pulse 0.4s ease; }
-        button:focus-visible { outline: 2px solid #E85478; outline-offset: 2px; }
+        button:focus-visible { outline: 2px solid #72BFD9; outline-offset: 2px; }
       `}</style>
 
       <div style={{ maxWidth: '780px', margin: '0 auto' }}>
@@ -478,7 +478,7 @@ export default function PianoCityProgram() {
             letterSpacing: '-0.02em',
           }}>
             Piano City Milano<br />
-            <em style={{ color: '#E85478', fontWeight: 500, fontStyle: 'italic' }}>Varia's pick choices</em>
+            <em style={{ color: '#72BFD9', fontWeight: 500, fontStyle: 'italic' }}>Varia's pick choices</em>
           </h1>
 
           {/* Counter */}
@@ -490,11 +490,11 @@ export default function PianoCityProgram() {
             paddingTop: '1rem',
             borderTop: '1px dashed rgba(244,242,206,0.2)',
           }}>
-            <Heart size={16} style={{ color: '#E85478', fill: '#E85478' }} />
+            <Heart size={16} style={{ color: '#72BFD9', fill: '#72BFD9' }} />
             <span className="mono" style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#C96830' }}>
               GOING TO
             </span>
-            <span className="display" style={{ fontSize: '2rem', fontWeight: 700, color: '#E85478', lineHeight: 1 }}>
+            <span className="display" style={{ fontSize: '2rem', fontWeight: 700, color: '#72BFD9', lineHeight: 1 }}>
               {goingCount}
             </span>
             <span className="mono" style={{ fontSize: '0.75rem', color: '#C96830' }}>
@@ -605,9 +605,9 @@ export default function PianoCityProgram() {
                           marginBottom: '0.3rem',
                         }}>
                           {concert.title}
-                          {concert.isStar && <Star size={14} style={{ marginLeft: '0.4rem', color: '#E85478', fill: '#E85478' }} />}
+                          {concert.isStar && <Star size={14} style={{ marginLeft: '0.4rem', color: '#72BFD9', fill: '#72BFD9' }} />}
                         </h3>
-                        <p style={{ fontStyle: 'italic', color: '#E85478', fontSize: '0.95rem', margin: 0, marginBottom: '0.5rem', fontWeight: 500 }}>
+                        <p style={{ fontStyle: 'italic', color: '#72BFD9', fontSize: '0.95rem', margin: 0, marginBottom: '0.5rem', fontWeight: 500 }}>
                           {concert.program}
                         </p>
                       </div>
@@ -678,9 +678,9 @@ export default function PianoCityProgram() {
                         fontSize: '0.6rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: '#E85478',
+                        color: '#72BFD9',
                         textDecoration: 'none',
-                        borderBottom: '1px dotted #E85478',
+                        borderBottom: '1px dotted #72BFD9',
                         marginBottom: '0.7rem',
                       }}
                     >
@@ -725,7 +725,7 @@ export default function PianoCityProgram() {
                           fontStyle: 'italic',
                           fontSize: '0.95rem',
                           color: '#C96830',
-                          borderLeft: '3px solid #E85478',
+                          borderLeft: '3px solid #72BFD9',
                           paddingLeft: '0.8rem',
                           marginTop: '0.7rem',
                           marginBottom: 0,
@@ -817,7 +817,7 @@ export default function PianoCityProgram() {
           <div style={{
             marginTop: '2rem',
             background: 'rgba(232, 84, 120, 0.07)',
-            borderLeft: '3px solid #E85478',
+            borderLeft: '3px solid #72BFD9',
             padding: '1.2rem',
             fontSize: '0.92rem',
           }}>
