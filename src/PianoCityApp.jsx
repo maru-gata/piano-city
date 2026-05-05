@@ -401,6 +401,7 @@ const dayConfig = {
 const badgeConfig = {
   priority: { label: '★ Priority', bg: '#d4a83a', color: '#1a1a1a' },
   walkin: { label: 'Free, walk-in', bg: 'transparent', color: '#5c4a2a', border: '#5c4a2a' },
+  free: { label: 'Free', bg: 'transparent', color: '#5c4a2a', border: '#5c4a2a' },
   booking: { label: 'Booking required', bg: '#b4ffc2', color: '#fff' },
   nolate: { label: 'No late entry', bg: '#1a1a1a', color: '#f5ecd6' },
   booked: { label: '✓ Already booked', bg: '#7a8a3f', color: '#fff' },
