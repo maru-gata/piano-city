@@ -392,19 +392,19 @@ const alternatesData = [
 ];
 
 const dayConfig = {
-  thu: { number: '00', title: 'Prelude', label: 'Thu · 14 May', accent: '#b4ffc2' },
-  fri: { number: '01', title: 'Opening', label: 'Fri · 15 May', accent: '#b4ffc2' },
-  sat: { number: '02', title: 'Marathon', label: 'Sat · 16 May', accent: '#b4ffc2' },
-  sun: { number: '03', title: 'Catharsis', label: 'Sun · 17 May', accent: '#b4ffc2' },
+  thu: { number: '00', title: 'Prelude', label: 'Thu · 14 May', accent: '#E85478' },
+  fri: { number: '01', title: 'Opening', label: 'Fri · 15 May', accent: '#E85478' },
+  sat: { number: '02', title: 'Marathon', label: 'Sat · 16 May', accent: '#E85478' },
+  sun: { number: '03', title: 'Catharsis', label: 'Sun · 17 May', accent: '#E85478' },
 };
 
 const badgeConfig = {
-  priority: { label: '★ Priority', bg: '#d4a83a', color: '#1a1a1a' },
-  walkin: { label: 'Free, walk-in', bg: 'transparent', color: '#5c4a2a', border: '#5c4a2a' },
-  free: { label: 'Free', bg: 'transparent', color: '#5c4a2a', border: '#5c4a2a' },
-  booking: { label: 'Booking required', bg: '#b4ffc2', color: '#fff' },
-  nolate: { label: 'No late entry', bg: '#1a1a1a', color: '#f5ecd6' },
-  booked: { label: '✓ Already booked', bg: '#7a8a3f', color: '#fff' },
+  priority: { label: '★ Priority', bg: '#E85478', color: '#fff' },
+  walkin: { label: 'Free, walk-in', bg: 'transparent', color: '#9B4520', border: '#9B4520' },
+  free: { label: 'Free', bg: 'transparent', color: '#9B4520', border: '#9B4520' },
+  booking: { label: 'Booking required', bg: '#E85478', color: '#fff' },
+  nolate: { label: 'No late entry', bg: '#252518', color: '#F4F2CE' },
+  booked: { label: '✓ Already booked', bg: '#7A3018', color: '#fff' },
 };
 
 export default function PianoCityProgram() {
@@ -444,8 +444,8 @@ export default function PianoCityProgram() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: '#f5ecd6',
-      color: '#1a1a1a',
+      background: '#F4F2CE',
+      color: '#252518',
       fontFamily: "'Cormorant Garamond', Georgia, serif",
       fontWeight: 400,
       padding: '2rem 1rem 6rem',
@@ -459,14 +459,14 @@ export default function PianoCityProgram() {
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
         .concert-card { animation: fadeUp 0.4s ease-out backwards; }
         .heart-pulse { animation: pulse 0.4s ease; }
-        button:focus-visible { outline: 2px solid #b4ffc2; outline-offset: 2px; }
+        button:focus-visible { outline: 2px solid #E85478; outline-offset: 2px; }
       `}</style>
 
       <div style={{ maxWidth: '780px', margin: '0 auto' }}>
 
         {/* Header */}
-        <header style={{ borderBottom: '1px solid #1a1a1a', paddingBottom: '1.5rem', marginBottom: '1.5rem' }}>
-          <div className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#5c4a2a', marginBottom: '1rem' }}>
+        <header style={{ borderBottom: '1px solid #252518', paddingBottom: '1.5rem', marginBottom: '1.5rem' }}>
+          <div className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#9B4520', marginBottom: '1rem' }}>
             14 — 17 maggio 2026 · for Varia
           </div>
           <h1 className="display" style={{
@@ -478,7 +478,7 @@ export default function PianoCityProgram() {
             letterSpacing: '-0.02em',
           }}>
             Piano City Milano<br />
-            <em style={{ color: '#b4ffc2', fontWeight: 500, fontStyle: 'italic' }}>Varia's pick choices</em>
+            <em style={{ color: '#E85478', fontWeight: 500, fontStyle: 'italic' }}>Varia's pick choices</em>
           </h1>
 
           {/* Counter */}
@@ -488,16 +488,16 @@ export default function PianoCityProgram() {
             gap: '0.7rem',
             marginTop: '1.2rem',
             paddingTop: '1rem',
-            borderTop: '1px dashed rgba(26,26,26,0.2)',
+            borderTop: '1px dashed rgba(37,37,24,0.2)',
           }}>
-            <Heart size={16} style={{ color: '#b4ffc2', fill: '#b4ffc2' }} />
-            <span className="mono" style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#5c4a2a' }}>
+            <Heart size={16} style={{ color: '#E85478', fill: '#E85478' }} />
+            <span className="mono" style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#9B4520' }}>
               GOING TO
             </span>
-            <span className="display" style={{ fontSize: '2rem', fontWeight: 700, color: '#b4ffc2', lineHeight: 1 }}>
+            <span className="display" style={{ fontSize: '2rem', fontWeight: 700, color: '#E85478', lineHeight: 1 }}>
               {goingCount}
             </span>
-            <span className="mono" style={{ fontSize: '0.75rem', color: '#5c4a2a' }}>
+            <span className="mono" style={{ fontSize: '0.75rem', color: '#9B4520' }}>
               of {totalConcerts}
             </span>
           </div>
@@ -529,9 +529,9 @@ export default function PianoCityProgram() {
                 textTransform: 'uppercase',
                 padding: '0.65rem 1.1rem',
                 fontWeight: 600,
-                background: activeDay === key ? '#1a1a1a' : 'transparent',
-                color: activeDay === key ? '#f5ecd6' : '#1a1a1a',
-                border: '1px solid #1a1a1a',
+                background: activeDay === key ? '#252518' : 'transparent',
+                color: activeDay === key ? '#F4F2CE' : '#252518',
+                border: '1px solid #252518',
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
                 transition: 'all 0.2s',
@@ -555,18 +555,18 @@ export default function PianoCityProgram() {
                 display: 'flex',
                 alignItems: 'baseline',
                 gap: '0.8rem',
-                borderBottom: '1px solid #1a1a1a',
+                borderBottom: '1px solid #252518',
                 paddingBottom: '0.5rem',
                 marginBottom: '1.5rem',
                 flexWrap: 'wrap',
               }}>
-                <span className="mono" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', color: '#5c4a2a' }}>
+                <span className="mono" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', color: '#9B4520' }}>
                   Day {cfg.number}
                 </span>
                 <span className="display" style={{ fontSize: '1.5rem', fontStyle: 'italic', flex: 1, minWidth: 0, fontWeight: 500 }}>
                   {cfg.title}
                 </span>
-                <span className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.15em', color: '#5c4a2a' }}>
+                <span className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.15em', color: '#9B4520' }}>
                   {cfg.label}
                 </span>
               </div>
@@ -583,8 +583,8 @@ export default function PianoCityProgram() {
                     style={{
                       animationDelay: `${idx * 0.05}s`,
                       marginBottom: '1.2rem',
-                      background: isGoing ? 'rgba(168, 132, 63, 0.04)' : 'transparent',
-                      border: isGoing ? '1px solid rgba(168, 132, 63, 0.2)' : '1px solid rgba(26,26,26,0.1)',
+                      background: isGoing ? 'rgba(232, 84, 120, 0.05)' : 'transparent',
+                      border: isGoing ? '1px solid rgba(232, 84, 120, 0.25)' : '1px solid rgba(37,37,24,0.1)',
                       padding: '1.2rem',
                       transition: 'all 0.3s',
                       opacity: isSwappedOut ? 0.4 : 1,
@@ -594,8 +594,8 @@ export default function PianoCityProgram() {
                     {/* Header row */}
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.6rem' }}>
                       <div style={{ flex: 1, minWidth: 0 }}>
-                        <div className="mono" style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: '0.2rem', color: '#1a1a1a' }}>
-                          {concert.time} <span style={{ fontSize: '0.6rem', color: '#5c4a2a', letterSpacing: '0.1em', textTransform: 'uppercase', marginLeft: '0.4rem' }}>{concert.duration}</span>
+                        <div className="mono" style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: '0.2rem', color: '#252518' }}>
+                          {concert.time} <span style={{ fontSize: '0.6rem', color: '#9B4520', letterSpacing: '0.1em', textTransform: 'uppercase', marginLeft: '0.4rem' }}>{concert.duration}</span>
                         </div>
                         <h3 className="display" style={{
                           fontSize: '1.3rem',
@@ -605,9 +605,9 @@ export default function PianoCityProgram() {
                           marginBottom: '0.3rem',
                         }}>
                           {concert.title}
-                          {concert.isStar && <Star size={14} style={{ marginLeft: '0.4rem', color: '#b4ffc2', fill: '#b4ffc2' }} />}
+                          {concert.isStar && <Star size={14} style={{ marginLeft: '0.4rem', color: '#E85478', fill: '#E85478' }} />}
                         </h3>
-                        <p style={{ fontStyle: 'italic', color: '#b4ffc2', fontSize: '0.95rem', margin: 0, marginBottom: '0.5rem', fontWeight: 500 }}>
+                        <p style={{ fontStyle: 'italic', color: '#E85478', fontSize: '0.95rem', margin: 0, marginBottom: '0.5rem', fontWeight: 500 }}>
                           {concert.program}
                         </p>
                       </div>
@@ -621,9 +621,9 @@ export default function PianoCityProgram() {
                           width: '40px',
                           height: '40px',
                           borderRadius: '50%',
-                          border: `1.5px solid ${isGoing ? '#b4ffc2' : '#5c4a2a'}`,
-                          background: isGoing ? '#b4ffc2' : 'transparent',
-                          color: isGoing ? '#fff' : '#5c4a2a',
+                          border: `1.5px solid ${isGoing ? '#E85478' : '#9B4520'}`,
+                          background: isGoing ? '#E85478' : 'transparent',
+                          color: isGoing ? '#fff' : '#9B4520',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
@@ -662,9 +662,9 @@ export default function PianoCityProgram() {
                     </div>
 
                     {/* Venue */}
-                    <div className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.08em', color: '#5c4a2a', textTransform: 'uppercase', marginBottom: '0.6rem' }}>
+                    <div className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.08em', color: '#9B4520', textTransform: 'uppercase', marginBottom: '0.6rem' }}>
                       <MapPin size={10} style={{ display: 'inline', marginRight: '0.3rem', verticalAlign: '-1px' }} />
-                      <strong style={{ color: '#1a1a1a' }}>{concert.venue}</strong> · {concert.address}
+                      <strong style={{ color: '#252518' }}>{concert.venue}</strong> · {concert.address}
                     </div>
 
                     {/* Map link */}
@@ -678,9 +678,9 @@ export default function PianoCityProgram() {
                         fontSize: '0.6rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: '#b4ffc2',
+                        color: '#E85478',
                         textDecoration: 'none',
-                        borderBottom: '1px dotted #b4ffc2',
+                        borderBottom: '1px dotted #E85478',
                         marginBottom: '0.7rem',
                       }}
                     >
@@ -697,7 +697,7 @@ export default function PianoCityProgram() {
                         gap: '0.3rem',
                         background: 'none',
                         border: 'none',
-                        color: '#5c4a2a',
+                        color: '#9B4520',
                         fontSize: '0.65rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
@@ -715,7 +715,7 @@ export default function PianoCityProgram() {
                       <div style={{
                         marginTop: '0.8rem',
                         paddingTop: '0.8rem',
-                        borderTop: '1px solid rgba(26,26,26,0.1)',
+                        borderTop: '1px solid rgba(37,37,24,0.1)',
                         animation: 'fadeUp 0.3s ease',
                       }}>
                         <p style={{ fontSize: '0.98rem', lineHeight: 1.6, marginBottom: '0.6rem', margin: 0, fontWeight: 400 }}>
@@ -724,8 +724,8 @@ export default function PianoCityProgram() {
                         <p style={{
                           fontStyle: 'italic',
                           fontSize: '0.95rem',
-                          color: '#5c4a2a',
-                          borderLeft: '3px solid #b4ffc2',
+                          color: '#9B4520',
+                          borderLeft: '3px solid #E85478',
                           paddingLeft: '0.8rem',
                           marginTop: '0.7rem',
                           marginBottom: 0,
@@ -750,8 +750,8 @@ export default function PianoCityProgram() {
                       width: '100%',
                       padding: '0.7rem',
                       background: 'transparent',
-                      border: '1px dashed #5c4a2a',
-                      color: '#5c4a2a',
+                      border: '1px dashed #9B4520',
+                      color: '#9B4520',
                       fontSize: '0.7rem',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
@@ -775,14 +775,14 @@ export default function PianoCityProgram() {
                         <div
                           key={alt.id}
                           style={{
-                            background: '#ede8df',
+                            background: '#E8E5C0',
                             padding: '1rem',
-                            borderLeft: '3px solid #5c4a2a',
+                            borderLeft: '3px solid #9B4520',
                             fontSize: '0.88rem',
                             animation: 'fadeUp 0.3s ease',
                           }}
                         >
-                          <div className="mono" style={{ fontSize: '0.6rem', letterSpacing: '0.12em', color: '#5c4a2a', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
+                          <div className="mono" style={{ fontSize: '0.6rem', letterSpacing: '0.12em', color: '#9B4520', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
                             {alt.time} · {alt.venue} · {alt.booking}
                           </div>
                           <h4 style={{ fontSize: '1.05rem', fontWeight: 500, margin: 0, marginBottom: '0.4rem' }}>
@@ -793,14 +793,14 @@ export default function PianoCityProgram() {
                           </p>
                           <p style={{
                             fontStyle: 'italic',
-                            color: '#5c4a2a',
+                            color: '#9B4520',
                             fontSize: '0.82rem',
                             margin: 0,
                             paddingTop: '0.4rem',
                             borderTop: '1px solid rgba(0,0,0,0.08)',
                             lineHeight: 1.5,
                           }}>
-                            <strong style={{ fontStyle: 'normal', color: '#1a1a1a' }}>Why not:</strong> {alt.whyNot}
+                            <strong style={{ fontStyle: 'normal', color: '#252518' }}>Why not:</strong> {alt.whyNot}
                           </p>
                         </div>
                       ))}
@@ -816,8 +816,8 @@ export default function PianoCityProgram() {
         {(activeDay === 'all' || activeDay === 'sun') && (
           <div style={{
             marginTop: '2rem',
-            background: 'rgba(232, 208, 152, 0.18)',
-            borderLeft: '3px solid #e8d098',
+            background: 'rgba(232, 84, 120, 0.07)',
+            borderLeft: '3px solid #E85478',
             padding: '1.2rem',
             fontSize: '0.92rem',
           }}>
@@ -837,16 +837,16 @@ export default function PianoCityProgram() {
         <footer style={{
           marginTop: '4rem',
           paddingTop: '2.5rem',
-          borderTop: '1px solid #1a1a1a',
+          borderTop: '1px solid #252518',
           textAlign: 'center',
           fontStyle: 'italic',
-          color: '#5c4a2a',
+          color: '#9B4520',
         }}>
           <p className="display" style={{ margin: 0, marginBottom: '0.4rem', fontSize: '1.15rem', fontWeight: 500 }}>
             Four days. Twelve concerts. One sunrise.
           </p>
           <p style={{ margin: 0 }}>Set the 5 AM alarm.</p>
-          <div className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: '1.5rem', color: '#1a1a1a' }}>
+          <div className="mono" style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: '1.5rem', color: '#252518' }}>
             — for Varia · may 2026
           </div>
         </footer>
