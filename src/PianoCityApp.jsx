@@ -168,7 +168,7 @@ const concertsData = [
     venue: 'Velodromo Maspes-Vigorelli',
     address: 'Via Arona 19 · Zone 8',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Velodromo+Vigorelli+Via+Arona+19+Milano',
-    badges: ['priority', 'booking'],
+    badges: ['free', 'walkin'],
     isStar: true,
     description: 'Co-composed the BAFTA-winning Broadchurch soundtrack with Ólafur Arnalds. Trained at Reykjavík Iceland Academy of the Arts and Berklee. Signed to Deutsche Grammophon in 2024; The Importance of Birds (2025). Icelandic melancholy with electronic hints, performed at sunrise inside Milan\'s historic 1935 cycling velodrome.',
     whyYou: 'The concert the festival made for you. Set an alarm for 5:00. Worth every minute of lost sleep.',
@@ -187,7 +187,7 @@ const concertsData = [
     venue: 'Armani / Silos',
     address: 'Via Bergognone 40 · Zone 6',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Armani+Silos+Via+Bergognone+40+Milano',
-    badges: ['booking'],
+    badges: ['free', 'walkin'],
     description: 'Original score for Virgilio Villoresi\'s film adaptation of Dino Buzzati\'s Poema a fumetti — premiered at Venice 2025, shortlisted for the David di Donatello. Floating string orchestrations, impressionist atmosphere. Trabace is part of experimental collective Metameccanici.',
     whyYou: 'Buzzati + dream-world soundtrack inside Armani/Silos. Aesthetic coherence: minimalist architecture, impressionist score, surreal source text.',
     isAlt: false,
@@ -205,7 +205,7 @@ const concertsData = [
     venue: 'Museo Bagatti Valsecchi',
     address: 'Via Gesù 5 · Zone 1',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Museo+Bagatti+Valsecchi+Via+Ges%C3%B9+5+Milano',
-    badges: ['booking'],
+    badges: ['free', 'walkin'],
     description: 'Selected for the Rising Stars program. Recital inside one of Milan\'s most beautifully preserved late-19th-century private museums — a Renaissance-revival palazzo with intact period rooms.',
     whyYou: 'Japanese pianist + Bagatti Valsecchi. Two of your loves intersecting in 50 minutes.',
     isAlt: false,
@@ -223,7 +223,7 @@ const concertsData = [
     venue: 'Piscina Cozzi',
     address: 'Via Tunisia 35 · Zone 1 · your neighborhood',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Piscina+Cozzi+Via+Tunisia+35+Milano',
-    badges: ['booking'],
+    badges: ['free', 'walkin'],
     description: 'Bof composed and arranged "Shallow" for Bradley Cooper / Lady Gaga in A Star Is Born — 100M+ streams. Live, he alternates electronic console, modular synths, master keyboard, grand piano. Inside the historic 1930s rationalist swimming pool.',
     whyYou: 'Architecturally Cozzi is gorgeous — be ready to leave mid-set if you\'re going to Eno.',
     isAlt: false,
@@ -392,16 +392,16 @@ const alternatesData = [
 ];
 
 const dayConfig = {
-  thu: { number: '00', title: 'Prelude', label: 'Thu · 14 May', accent: '#a8843f' },
-  fri: { number: '01', title: 'Opening', label: 'Fri · 15 May', accent: '#a8843f' },
-  sat: { number: '02', title: 'Marathon', label: 'Sat · 16 May', accent: '#a8843f' },
-  sun: { number: '03', title: 'Catharsis', label: 'Sun · 17 May', accent: '#a8843f' },
+  thu: { number: '00', title: 'Prelude', label: 'Thu · 14 May', accent: '#b4ffc2' },
+  fri: { number: '01', title: 'Opening', label: 'Fri · 15 May', accent: '#b4ffc2' },
+  sat: { number: '02', title: 'Marathon', label: 'Sat · 16 May', accent: '#b4ffc2' },
+  sun: { number: '03', title: 'Catharsis', label: 'Sun · 17 May', accent: '#b4ffc2' },
 };
 
 const badgeConfig = {
   priority: { label: '★ Priority', bg: '#d4a83a', color: '#1a1a1a' },
   walkin: { label: 'Free, walk-in', bg: 'transparent', color: '#5c4a2a', border: '#5c4a2a' },
-  booking: { label: 'Booking required', bg: '#a8843f', color: '#fff' },
+  booking: { label: 'Booking required', bg: '#b4ffc2', color: '#fff' },
   nolate: { label: 'No late entry', bg: '#1a1a1a', color: '#f5ecd6' },
   booked: { label: '✓ Already booked', bg: '#7a8a3f', color: '#fff' },
 };
@@ -458,7 +458,7 @@ export default function PianoCityProgram() {
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
         .concert-card { animation: fadeUp 0.4s ease-out backwards; }
         .heart-pulse { animation: pulse 0.4s ease; }
-        button:focus-visible { outline: 2px solid #a8843f; outline-offset: 2px; }
+        button:focus-visible { outline: 2px solid #b4ffc2; outline-offset: 2px; }
       `}</style>
 
       <div style={{ maxWidth: '780px', margin: '0 auto' }}>
@@ -477,7 +477,7 @@ export default function PianoCityProgram() {
             letterSpacing: '-0.02em',
           }}>
             Piano City Milano<br />
-            <em style={{ color: '#a8843f', fontWeight: 500, fontStyle: 'italic' }}>a soul itinerary</em>
+            <em style={{ color: '#b4ffc2', fontWeight: 500, fontStyle: 'italic' }}>Varia's pick choices</em>
           </h1>
 
           {/* Counter */}
@@ -489,11 +489,11 @@ export default function PianoCityProgram() {
             paddingTop: '1rem',
             borderTop: '1px dashed rgba(26,26,26,0.2)',
           }}>
-            <Heart size={16} style={{ color: '#a8843f', fill: '#a8843f' }} />
+            <Heart size={16} style={{ color: '#b4ffc2', fill: '#b4ffc2' }} />
             <span className="mono" style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#5c4a2a' }}>
               GOING TO
             </span>
-            <span className="display" style={{ fontSize: '2rem', fontWeight: 700, color: '#a8843f', lineHeight: 1 }}>
+            <span className="display" style={{ fontSize: '2rem', fontWeight: 700, color: '#b4ffc2', lineHeight: 1 }}>
               {goingCount}
             </span>
             <span className="mono" style={{ fontSize: '0.75rem', color: '#5c4a2a' }}>
@@ -604,9 +604,9 @@ export default function PianoCityProgram() {
                           marginBottom: '0.3rem',
                         }}>
                           {concert.title}
-                          {concert.isStar && <Star size={14} style={{ marginLeft: '0.4rem', color: '#a8843f', fill: '#a8843f' }} />}
+                          {concert.isStar && <Star size={14} style={{ marginLeft: '0.4rem', color: '#b4ffc2', fill: '#b4ffc2' }} />}
                         </h3>
-                        <p style={{ fontStyle: 'italic', color: '#a8843f', fontSize: '0.95rem', margin: 0, marginBottom: '0.5rem', fontWeight: 500 }}>
+                        <p style={{ fontStyle: 'italic', color: '#b4ffc2', fontSize: '0.95rem', margin: 0, marginBottom: '0.5rem', fontWeight: 500 }}>
                           {concert.program}
                         </p>
                       </div>
@@ -620,8 +620,8 @@ export default function PianoCityProgram() {
                           width: '40px',
                           height: '40px',
                           borderRadius: '50%',
-                          border: `1.5px solid ${isGoing ? '#a8843f' : '#5c4a2a'}`,
-                          background: isGoing ? '#a8843f' : 'transparent',
+                          border: `1.5px solid ${isGoing ? '#b4ffc2' : '#5c4a2a'}`,
+                          background: isGoing ? '#b4ffc2' : 'transparent',
                           color: isGoing ? '#fff' : '#5c4a2a',
                           cursor: 'pointer',
                           display: 'flex',
@@ -677,9 +677,9 @@ export default function PianoCityProgram() {
                         fontSize: '0.6rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: '#a8843f',
+                        color: '#b4ffc2',
                         textDecoration: 'none',
-                        borderBottom: '1px dotted #a8843f',
+                        borderBottom: '1px dotted #b4ffc2',
                         marginBottom: '0.7rem',
                       }}
                     >
@@ -724,7 +724,7 @@ export default function PianoCityProgram() {
                           fontStyle: 'italic',
                           fontSize: '0.95rem',
                           color: '#5c4a2a',
-                          borderLeft: '3px solid #a8843f',
+                          borderLeft: '3px solid #b4ffc2',
                           paddingLeft: '0.8rem',
                           marginTop: '0.7rem',
                           marginBottom: 0,
